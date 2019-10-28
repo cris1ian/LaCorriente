@@ -1,0 +1,23 @@
+<ion-toolbar class="eon6-primarycolor">
+
+    <ion-buttons slot="secondary">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="eon6-babytext eon6-large-text">Debebes</ion-title>
+
+    <ion-buttons slot="primary">
+        <ion-button size="large">
+            <ion-icon slot="icon-only" name="share"></ion-icon>
+        </ion-button>
+        <ion-button [routerLink]="['/profile']" size="large">
+            <ng-container *ngIf="account.picture; else noPicture">
+                <div><ion-img class="profile-pic" src="{{account.picture}}"></ion-img></div>
+            </ng-container>
+            <ng-template #noPicture>
+                <ion-icon slot="icon-only" name="contact"></ion-icon>
+            </ng-template>
+        </ion-button>
+    </ion-buttons>
+
+</ion-toolbar>

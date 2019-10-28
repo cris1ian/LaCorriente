@@ -1,0 +1,61 @@
+<ion-header no-border>
+    <app-baby-header></app-baby-header>
+</ion-header>
+
+<ion-content>
+
+    <div class="picture-frame">
+        <!-- Profile picture present -->
+        <div *ngIf="account.picture; else noPicture">
+            <div>
+                <!-- Current profile picture -->
+                <ion-img class="profile-pic" [src]="account.picture" alt="No se puede mostrar foto de perfil">
+                    <input style="display: none;" accept="image/*" id="raised-button-file" multiple type="file"
+                        (change)="onChangeImagen($event)" />
+                </ion-img>
+            </div>
+        </div>
+        <!-- No profile picture -->
+        <ng-template #noPicture>
+            <div class="upload-pic">
+                <ion-icon color="primary" name="camera"></ion-icon>
+                <label style="text-align: center;" htmlFor="raised-button-file">
+                    Subir imagen
+                    <input style="display: none;" accept="image/*" id="raised-button-file" multiple type="file"
+                        (change)="onChangeImagen($event)" />
+                </label>
+            </div>
+        </ng-template>
+
+    </div>
+
+    <ion-card>
+        <ion-card-content>
+
+            <ion-button color="secondary" class="profile-name" expand="block">
+                <span class="eon6-graycolor">{{ account.user }}</span>
+            </ion-button>
+
+            <ion-button expand="block" color="primary">
+                Información Personal
+                <ion-icon slot="end" name="arrow-dropright"></ion-icon>
+            </ion-button>
+
+            <ion-list lines="none">
+                <ion-item>
+                    Medios de Pago
+                </ion-item>
+                <ion-item>
+                    Inicio de sesión y seguridad
+                </ion-item>
+                <ion-item>
+                    Almacenamiento
+                </ion-item>
+                <ion-item (click)="doLogOut()">
+                    Cerrar sesión
+                </ion-item>
+            </ion-list>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

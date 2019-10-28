@@ -1,0 +1,48 @@
+.full-height {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ion-card {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  // font-size: 100%;
+  height: 90%;
+  margin: 4% 12%;
+  position: relative;
+}
+
+// ion-card-header {
+//   margin-bottom: 0%;
+// }
+
+ion-card-content {
+  width: 100%;
+  font-size: 85%;
+  position: absolute;
+  bottom: 0;
+}
+
+.icon {
+  font-size: 2rem; //Preferred size here
+}
+
+a {
+  text-decoration: none;
+}
+
+.baby-store {
+  background-image: url("../../../../assets/imgs/home-page/home-img01.jpg");
+}   
+
+.baby-mom {
+  background-image: url("../../../../assets/imgs/home-page/home-img04.jpg");
+}
+
+.baby-phrases {
+  background-image: url("../../../../assets/imgs/home-page/home-img07.jpg");
+}

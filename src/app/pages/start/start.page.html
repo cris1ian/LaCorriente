@@ -1,0 +1,32 @@
+<ion-content class="ion-text-center">
+
+    <ion-grid class="baby-start">
+        <ion-row>
+            <ion-col>
+
+                <div class="baby-title ion-text-center ion-margin eon6-secondarycolor eon6-babytext">
+                    Debebes
+                </div>
+
+                <div *ngIf="isLoading">
+                    <ion-spinner color="primary"></ion-spinner>
+                </div>
+
+                <div class="baby-start-bottom">
+                    <div class="ion-padding">
+                        <ion-button color="secondary" [routerLink]="['/login']" fill="outline" shape="round"
+                            expand="block">
+                            Ingresar
+                        </ion-button>
+                    </div>
+
+                    <div class="register recover-pass ion-text-right eon6-secondarycolor">
+                        <h5>¿No tenes cuenta? <a class="eon6-secondarycolor" [routerLink]="['/register']">Crear</a></h5>
+                    </div>
+                </div>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

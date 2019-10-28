@@ -1,0 +1,37 @@
+<ion-header no-border>
+    <app-baby-header></app-baby-header>
+</ion-header>
+
+<ion-content>
+    <div class="full-height">
+
+        <ion-card [routerLink]="['/tabs/mybaby']" class="baby-store">
+            <ion-card-header>
+                <ion-card-title class="eon6-babytext eon6-secondarycolor ion-text-right">Store</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="eon6-secondarycolor ion-text-center">
+                Encontrá todos los productos <br> y servicios que necesitás
+            </ion-card-content>
+        </ion-card>
+
+        <ion-card [routerLink]="['/tabs/calendar']" class="baby-mom">
+            <ion-card-header>
+                <ion-card-title class="eon6-babytext eon6-secondarycolor ion-text-right">Mundo Mama</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="eon6-secondarycolor ion-text-center">
+                Encontrá toda la <br> ayuda que necesitás
+            </ion-card-content>
+        </ion-card>
+
+        <ion-card class="baby-phrases">
+            <ion-card-header>
+                <ion-card-title class="eon6-babytext eon6-secondarycolor ion-text-right">Frases</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="eon6-secondarycolor ion-text-left">
+                "No hay manera <br> de ser una madre perfecta <br> hay un millon de maneras <br> de ser
+                una buena madre"
+            </ion-card-content>
+        </ion-card>
+
+    </div>
+</ion-content>

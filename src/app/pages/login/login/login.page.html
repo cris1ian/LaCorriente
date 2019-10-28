@@ -1,0 +1,75 @@
+<div class="eon6-blankspace"></div>
+<div class="baby-border"></div>
+
+<ion-content class="ion-text-center">
+
+    <form #form="ngForm" (ngSubmit)="doLogin()">
+        <ion-grid>
+            <ion-row class="ion-justify-content-center">
+                <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+
+                    <div class="ion-text-left ion-margin eon6-primarycolor eon6-babytext baby-title">
+                        <h1>Debebes</h1>
+                    </div>
+
+                    <div class="ion-text-left ion-margin eon6-primarycolor">
+                        <h4>¡Hola! Inicia sesion para comenzar</h4>
+                    </div>
+
+                    <div>
+                        <ion-item class="ion-margin-horizontal">
+                            <ion-label color="medium" autocomplete="on" position="stacked">Nombre de usuario o mail
+                            </ion-label>
+                            <ion-input [disabled]="isLoading" name="name" type="text" [(ngModel)]="account.user"
+                                required>
+                            </ion-input>
+                        </ion-item>
+                        <ion-item class="ion-margin-horizontal">
+                            <ion-label color="medium" position="stacked">Contraseña</ion-label>
+                            <ion-input [disabled]="isLoading" name="password" type="password"
+                                [(ngModel)]="account.password" required>
+                            </ion-input>
+                        </ion-item>
+                    </div>
+
+                    <!-- <div *ngIf="isLoading">
+                        <ion-spinner color="primary"></ion-spinner>
+                    </div> -->
+
+                    <div class="ion-padding">
+                        <ion-button color="primary" shape="round" type="ngSubmit" [disabled]="form.invalid"
+                            expand="block">Ingresar
+                        </ion-button>
+                    </div>
+
+                    <div class="recover-pass ion-text-right eon6-graycolor">
+                        <h5>¿Olvidaste tu contraseña? <a [routerLink]="['/recover']">Recuperar</a></h5>
+                    </div>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+
+    <ion-grid>
+        <ion-row class="ion-justify-content-center eon6-redes">
+            <div class="ion-padding">
+                <ion-col class="" size-xs="6" size-lg="5">
+                    <ion-button class="facebook eon6-button eon6-secondarycolor" shape="round">Facebook</ion-button>
+                </ion-col>
+
+                <ion-col class="" size-xs="6" size-lg="5">
+                    <ion-button class="google eon6-button eon6-secondarycolor" shape="round">Google</ion-button>
+                </ion-col>
+            </div>
+        </ion-row>
+
+    </ion-grid>
+</ion-content>
+
+<ion-footer>
+    <ion-row class="ion-text-center">
+        <ion-note class="ion-padding eon6-graycolor">Tenes alguna duda Podés leer nuestro <a href="">FAQ's, Términos y
+                condiciones de uso</a> o nuestro <a href="">servicio de ayuda</a>.</ion-note>
+    </ion-row>
+</ion-footer>

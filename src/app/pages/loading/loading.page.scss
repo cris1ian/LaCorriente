@@ -1,0 +1,15 @@
+ion-content {
+  --ion-background-color: linear-gradient(var(--ion-color-primary), var(--ion-color-tertiary));
+}
+
+.baby-title {
+  margin: 50px 0px;
+  font-size: 3rem;
+}
+
+.baby-start {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

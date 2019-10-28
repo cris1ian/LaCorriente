@@ -1,0 +1,57 @@
+<div class="eon6-blankspace"></div>
+<div class="baby-border"></div>
+
+<ion-content class="ion-text-center">
+
+    <form #form="ngForm" (ngSubmit)="doLogin(form)">
+        <ion-grid>
+            <ion-row class="ion-justify-content-center">
+                <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+
+                    <div class="ion-text-left ion-margin eon6-primarycolor eon6-babytext baby-title">
+                        <h1>Debebes</h1>
+                    </div>
+
+                    <div class="ion-text-left ion-margin eon6-primarycolor">
+                        <h4>Recuperar cuenta</h4>
+                    </div>
+
+                    <div>
+                        <ion-item class="ion-margin-horizontal">
+                            <ion-label color="medium" autocomplete="on" position="stacked">Direccion de correo
+                                electronico</ion-label>
+                            <ion-input [disabled]="isLoading" name="email" type="email" [(ngModel)]="account.email"
+                                required pattern="[A-Za-z0-9._%+-]{2,}@[a-zA-Z0-9-_.]{2,}[.]{1}[a-zA-Z]{2,}">
+                            </ion-input>
+                        </ion-item>
+                    </div>
+
+                    <!-- <div *ngIf="isLoading">
+                        <ion-spinner color="primary"></ion-spinner>
+                    </div> -->
+
+                    <div class="ion-padding">
+                        <ion-button color="primary" shape="round" [disabled]="form.invalid" expand="block">Enviar correo
+                        </ion-button>
+                    </div>
+
+                    <div class="ion-text-left ion-margin eon6-graycolor">
+                        <h6>Te enviaremos un correo con los pasos para recuperar tu cuenta, por favor revisa tu bandeja
+                            de entrada.</h6>
+                    </div>
+
+                    <ion-note class="ion-padding">
+                    </ion-note>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+</ion-content>
+
+<ion-footer>
+    <ion-row class="ion-text-center">
+        <ion-note class="ion-padding eon6-graycolor">Tenes alguna duda Podés leer nuestro <a href="">FAQ's, Términos y
+                condiciones de uso</a> o nuestro <a href="">servicio de ayuda</a>.</ion-note>
+    </ion-row>
+</ion-footer>

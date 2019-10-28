@@ -1,0 +1,65 @@
+<app-baby-header></app-baby-header>
+
+<ion-content>
+    
+    <div *ngIf="baby" class="mybaby-container">
+
+        <div class="baby-container">
+            <div class="photo-container">
+                <img src="assets/imgs/bebe.png">
+            </div>
+
+            <div class="info-container">
+                <span class="eon6-graycolor">¡Hola! Soy <span class="eon6-primarycolor">{{ baby.name }}</span></span>
+            </div>
+        </div>
+
+        <div class="hitos-container">
+            <div class="row-hitos title-hitos">
+                Mi día a día
+            </div>
+            <div class="row-hitos title-row">
+                <div class="title-row-msg eon6-graycolor">
+                    Nuevo hito
+                </div>
+                <div class="title-row-opt">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="last-hito-container">
+            <div class="last-hito">
+                <div class="foot-icon">
+                    <i class="fas fa-shoe-prints"></i>
+                </div>
+                <div class="text-hito">
+                    Caminé 3 pasos
+                </div>
+                <div class="sub-text-hito">
+                    10 de Junio 23:00
+                </div>
+            </div>
+
+            <div class="more-btn">
+                Ver +
+            </div>
+        </div>
+
+        <div class="calendar-container">
+            <div class="row-calendar title-calendar">
+                Mis vacunas
+            </div>
+            <div class="row-calendar title-row">
+                <div class="title-row-msg eon6-graycolor">
+                    Proxima Vacuna
+                </div>
+                <div class="title-row-opt">
+                    Ver Calendario
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</ion-content>
